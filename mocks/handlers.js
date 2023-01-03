@@ -9,6 +9,7 @@ export const handlers = [
     }
     
     return res(
+      ctx.delay(1000),
       ctx.status(401),
       ctx.json({ message: 'Username / Password salah!' })
     );

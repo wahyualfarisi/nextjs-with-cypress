@@ -2,7 +2,7 @@ import { useState } from "react";
 import InputField from "./InputField";
 import Button from "./Button";
 
-const LoginForm = ({ onLogin, title = 'Log In', errorMessage }) => {
+const LoginForm = ({ onLogin, title = 'Log In', errorMessage, isLoading }) => {
 	const [submitted, setSubmitted] = useState(false);
 	const [username, setUsername] = useState('');
 	const [password, setPassword] = useState('');
@@ -40,7 +40,9 @@ const LoginForm = ({ onLogin, title = 'Log In', errorMessage }) => {
 						value={password}
 						autoComplete="current-password"
 					/>
-					<Button type="submit">Login</Button>
+					<Button type="submit" data-cy="btn-login" disabled={isLoading}>
+						{isLoading ? 'Loading...' : 'Login'}
+					</Button>
 					{errorMessage && (
 						<div className="text-red-500 mt-2">{errorMessage}</div>
 					)}

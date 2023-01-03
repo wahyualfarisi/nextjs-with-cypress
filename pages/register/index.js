@@ -8,7 +8,6 @@ const RegisterPage = () => {
 	const [errorMessage, setErrorMessage] = useState('');
 
 	const handleRegister = async(credentials) => {
-		console.log(credentials);
 		
 		try{
 			setErrorMessage('');

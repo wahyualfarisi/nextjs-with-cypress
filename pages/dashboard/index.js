@@ -28,7 +28,7 @@ const DashboardPage = () => {
         </h1>
 
 				<div className={styles.grid}>
-          <Button className="mt-2" onClick={onLogout}>Logout</Button>
+          <Button className="mt-2" onClick={onLogout} data-cy="btn-logout">Logout</Button>
         </div>
       </main>
 		</div>

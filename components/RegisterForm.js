@@ -28,7 +28,7 @@ const RegisterForm = ({ onRegister, title = 'Register', errorMessage }) => {
 						type="text"
 						label="Fullname"
 						submitted={submitted}
-						requiredMessage="fullname is required"
+						requiredMessage="Fullname is required"
 						onChange={(e) => setFullname(e.target.value)}
 						value={fullname}
 						autoComplete="fullname"
@@ -67,7 +67,7 @@ const RegisterForm = ({ onRegister, title = 'Register', errorMessage }) => {
 						autoComplete="current-password"
 					/>
 
-					<Button type="submit">Register</Button>
+					<Button type="submit" data-cy="btn-register">Register</Button>
 					{errorMessage && (
 						<div className="text-red-500 mt-2">{errorMessage}</div>
 					)}

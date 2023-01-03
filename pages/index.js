@@ -14,11 +14,11 @@ export default function Home() {
         </h1>
 
         <div className={styles.grid}>
-          <Link href="/login" className={styles.card}>
+          <Link href="/login" className={styles.card} data-cy="login">
             <h2>Login</h2>
           </Link>
           OR
-          <Link href="/register" className={styles.card}>
+          <Link href="/register" className={styles.card} data-cy="register">
             <h2>Register</h2>
           </Link>
         </div>
